@@ -14,10 +14,17 @@ base64 encoding scheme, 3 bytes binary data to 4 byte ASCII
 base64 mapping table, A-Z, a-z, 0-9, +, /
 
 C
+```
 /*
 ** Translation Table as described in RFC1113
 */
 static const char cb64[]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+```  
 
 asm
-
+```
+;Base64 -> ASCII mapping table
+base64_table	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		db "abcdefghijklmnopqrstuvwxyz"
+		db "0123456789+/="
+```
