@@ -31,6 +31,17 @@ base64_table	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 
+
+reverse the process, build a table, sort the base64 map by ASCII order, for example  
++ = 0x2B = 43, the minum, index offset =0
+$ = 0x24 = 36, invalid char for base64, index offset =1
+$ = 0x24 = 36, invalid char for base64, index offset =2
+$ = 0x24 = 36, invalid char for base64, index offset =3
+ｚ= 0x7A = 122, the maximum, index offset = 4  
+and so on....  
+
+static const char decode64map[]="+$$$/0123456789$$$=$$$$ABCDEFGHIJKLMNOPQRSTUVWXY$$$$$$$abcdefghijklmnopqrstuvwxyz";
+
 ```
 how about decoder
 
