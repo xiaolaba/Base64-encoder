@@ -42,7 +42,13 @@ $ = 0x24 = 36, invalid char for base64, index offset = 3
 and so on....  
 ｚ= 0x7A = 122, the maximum, index offset = 79  
 ```
-static const char decode64map[]="+$$$/0123456789$$$=$$$$ABCDEFGHIJKLMNOPQRSTUVWXY$$$$$$$abcdefghijklmnopqrstuvwxyz";
+
+static const char decode64map[]="+$$$/0123456789$$$=$$$$ABCDEFGHIJKLMNOPQRSTUVWXY$$$$$$$abcdefghijklmnopqrstuvwxyz";  
+
+// index value
+static const char decode64map[]="+$$$/0123456789$$$=$$$$ABCDEFGHIJKLMNOPQRSTUVWXY$$$$$$$abcdefghijklmnopqrstuvwxyz";  
+static const char decode64indexvalue[]={62,'$', '$', '$', 63, };  
+
 
 ```
 how about decoder
