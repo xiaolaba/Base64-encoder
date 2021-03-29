@@ -30,6 +30,8 @@ base64_table	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 ```
 
 
+
+```
 how about decoder
 
 index value	Base64 map	DEC	HEX	BIN	index offset
@@ -99,3 +101,4 @@ index value	Base64 map	DEC	HEX	BIN	index offset
 50	y	121	79	01111001	78
 51	z	122	7A	01111010	79
 
+```
