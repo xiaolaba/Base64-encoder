@@ -54,7 +54,7 @@ static const char decode64indexvalue[]={62,'$', '$', '$', 63, };
 how about decoder
 
 GITHUB table
-index_value|Base64_map|DEC|HEX|BIN|index_offset
+index_value | Base64_map | DEC | HEX | BIN | index_offset
 62|+|43|2B|00101011|0
 63|/|47|2F|00101111|4
 52|0|48|30|00110000|5
