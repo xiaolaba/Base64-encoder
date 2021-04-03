@@ -49,7 +49,7 @@ and so on....
 static const char decode64indexvalue[]={62,'$', '$', '$', 63, .......};  
 
 ```
-// index of reversed base64 table, sort from ASECII + to z
+// index of reversed base64 table, sort from ASCII + to z
 static const char Base64DecodeMap[] = { 62, // +
 					'$', '$', '$',	// index as invalid char of base64 
 					63, // /
