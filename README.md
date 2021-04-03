@@ -44,9 +44,8 @@ and so on....
 ```
   
 
-// index value
 
-static const char decode64indexvalue[]={62,'$', '$', '$', 63, };
+static const char decode64indexvalue[]={62,'$', '$', '$', 63, .......};  
 
 ```
 // index of reversed base64 table, sort from ASECII + to z
@@ -62,7 +61,10 @@ static const char Base64DecodeMap[] = { 62, // +
 					26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51 }; //a-z
 ```
 
+```
 
+
+```
 
 
 
@@ -137,6 +139,38 @@ GITHUB table
 
 
 
+
+```
+    while( feof( infile ) == 0 ) {
+        //for( len = 0, i = 0; i < 3 && feof( infile ) == 0; i++ ) {	//read 4 bytes as base64 group
+        for( len = 0, i = 0; i < 4 ; i++ ) {	//read 4 bytes as base64 grouped data
+		
+			v = getc( infile );	// read 1 byte from input_file
+			if( v != EOF ) {	// no end of file, a valid byte
+				// validate base64 char '+' ~ 'z', 43 - 122
+				switch (v) {
+				case 0x0a:	// ignore LF
+				case 0x0d:	// ignore CR
+					i--;
+//					printf("\nIgnore CR/LF\n");					
+					break;
+				case 43 ... 122 :	// valid base64 char, +,=,/,0-9,A-Z,a-z
+					if (v!= '=') len++; // omit padding
+//					printf("len= %d, \n", len);					
+					v = v-43;	// shift ASCII to offset of index
+//					printf("offset=(v-43)= %d, ",v);
+					v=(unsigned char) Base64DecodeMap[ v ];	// read the table based in offset
+//					printf("Base64DecodeMap[offset]=index_value= %d, ", v);
+					in[ i ] = v ;
+//					printf("i= %d, in[i]=stored_index_value= %d, ", i, in[ i ]);
+					break;
+				default : break;
+				}
+			}
+		
+        }
+
+```
 
 
 
