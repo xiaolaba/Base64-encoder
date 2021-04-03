@@ -49,16 +49,11 @@ static const char decode64map[]="+$$$/0123456789$$$=$$$$ABCDEFGHIJKLMNOPQRSTUVWX
 static const char decode64map[]="+$$$/0123456789$$$=$$$$ABCDEFGHIJKLMNOPQRSTUVWXY$$$$$$$abcdefghijklmnopqrstuvwxyz";  
 static const char decode64indexvalue[]={62,'$', '$', '$', 63, };  
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
 
-how about decoder
 
 GITHUB table
 | index_value | Base64_map | DEC | HEX | BIN | index_offset | 
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| -- | - | -- | -- | -------- | - |
 | 62 | + | 43 | 2B | 00101011 | 0 |  
 | 63 | / | 47 | 2F | 00101111 | 4 |  
 | 52 | 0 | 48 | 30 | 00110000 | 5 |  
