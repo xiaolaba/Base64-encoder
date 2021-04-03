@@ -45,7 +45,7 @@ and so on....
 ```
   
 
-
+// offset 0..79
 static const char decode64indexvalue[]={62,'$', '$', '$', 63, .......};  
 
 ```
