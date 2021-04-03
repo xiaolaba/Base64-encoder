@@ -53,10 +53,10 @@ static const char decode64indexvalue[]={62,'$', '$', '$', 63, };
 ```
 how about decoder
 
-index value	Base64 map	DEC	HEX	BIN	index offset
-62	+	43	2B	00101011	0
-63	/	47	2F	00101111	4
-52	0	48	30	00110000	5
+index_value	Base64_map	DEC	HEX	BIN	index_offset
+62		+		43	2B	00101011	0
+63		/		47	2F	00101111	4
+52		0	48	30	00110000	5
 53	1	49	31	00110001	6
 54	2	50	32	00110010	7
 55	3	51	33	00110011	8
