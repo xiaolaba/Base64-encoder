@@ -32,7 +32,8 @@ base64_table	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 
-reverse the process, build a table, sort the base64 map by ASCII order, for example  
+#### reverse the process, to decode based64 string,
+build a table, sort the base64 map by ASCII order, for example  
 ```
 + = 0x2B = 43, the minum, index offset =0  
 $ = 0x24 = 36, invalid char for base64, index offset = 1  
